@@ -49,13 +49,11 @@ public class MainActivity extends AppCompatActivity {
     public void readData(){
         ArrayList<HashMap<String,String>> listTeman = controller.getAllTeman();
         temanArrayList = new ArrayList<>();
-//        Pindah hasil query
         for (int i = 0; i < listTeman.size(); i++){
             Teman t = new Teman();
             t.setId(listTeman.get(i).get("id").toString());
             t.setNama(listTeman.get(i).get("nama").toString());
             t.setTelp(listTeman.get(i).get("telp").toString());
-//            Masukkan ke arrayList
             temanArrayList.add(t);
         }
     }
